@@ -1,0 +1,19 @@
+{% set libjpeg_version = "8c" %}
+{% set turbo_version = "1.5.1" %}
+
+package:
+    name: jpeg
+    version: {{ libjpeg_version }}_turbo_{{ turbo_version }}
+        
+requirements:
+    run:
+        - libjpeg-turbo {{ libjpeg_version }}_{{ turbo_version }}
+
+about:
+    home: http://www.libjpeg-turbo.org/
+    license: Custom open source license + BSD
+    summary: IJG JPEG compliant runtime library with SIMD and other optimizations
+    
+extra:    
+    recipe-maintainers:
+        - valgur
